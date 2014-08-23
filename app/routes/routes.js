@@ -15,7 +15,8 @@ module.exports = function(app, express){
   app.use(methodOverride());
 
   app.get('/', home.index);
-  app.get('/trips/init', trips.init);
+  app.get('/trips/new', trips.new);
+  app.post('/trips', trips.create);
 
   console.log('Express: Routes Loaded');
 };
