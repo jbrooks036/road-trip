@@ -1,18 +1,33 @@
 extends ../shared/template
 block content
-  h2 Home
-  .panel.panel-default
-    .panel-body
-      h4 Bootstrap Themes and Templates
-      ul
-        li: a(href='http://bootswatch.com/', target='_blank') http://bootswatch.com/
-        li: a(href='http://bootstrapzero.com/', target='_blank') http://bootstrapzero.com/
-        li: a(href='http://startbootstrap.com/', target='_blank') http://startbootstrap.com/
-        li: a(href='http://www.prepbootstrap.com/', target='_blank') http://www.prepbootstrap.com/
-        li: a(href='http://www.blacktie.co/', target='_blank') http://www.blacktie.co/
-        li: a(href='https://bootstrapmaster.com/', target='_blank') https://bootstrapmaster.com/
-        li: a(href='http://bootstrapstyler.com/', target='_blank') http://bootstrapstyler.com/
+  .row
+    .col-xs-12
+      #bigmap
+  .row
+    .col-xs-12
+      table.table.table-striped.table-hover
+        thead
+          tr
+            th Trip
+            th Cash
+            th Origin
+            th Destination
+            th Mid-Points
+            th Total Distance
+            th MPG
+            th Gas Price/Gal
+            th # Gallons
+            th Cash Remaining
+        tbody
+          each trip in trips
+            tr
+              td= trip.name
+              td= trip.cash
+              td= trip.origin
+              td= trip.destination
+  .row
+    .col-xs-12
+      #directions
 
 block scripts
-  script(src='/js/user/home.js')
-
+  script(src='/js/user/trips.js')

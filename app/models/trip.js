@@ -1,7 +1,22 @@
 'use strict';
 
-function Trip(){
-  console.log('in Trip constructor');
+var Mongo = require('mongodb');
+//    _     = require('lodash');
+
+function Trip(fields){
+  this._id        = Mongo.ObjectID();
+  this.name       = fields.name[0];
+  this.cash       = parseFloat(fields.cash[0]);
+  this.origin     = fields.origin[0];
+  this.oLat       = parseFloat(fields.oLat[0]);
+  this.oLng       = parseFloat(fields.oLng[0]);
+  this.destination = fields.destination[0];
+  this.dLat       = parseFloat(fields.dLat[0]);
+  this.dLng       = parseFloat(fields.dLng[0]);
+  this.mpg        = fields.mpg[0] * 1;
+  this.priceGas   = parseFloat(fields.priceGas[0]);
+  this.startDate  = fields.startDate[0];
+  this.endDate    = fields.endDate[0];
 }
 
 Object.defineProperty(Trip, 'collection', {
@@ -9,6 +24,7 @@ Object.defineProperty(Trip, 'collection', {
 });
 
 Trip.all = function(cb){
+  console.log('Trip.all');
   Trip.collection.find().toArray(cb);
 };
 

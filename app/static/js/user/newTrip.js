@@ -8,7 +8,7 @@
   });
 
   function addTrip(e){
-        alert('olat?');
+    // alert('olat?');
     var origin = $('#origin').val(),
         destination = $('#destination').val();
     geocode(origin, function(oName, oLat, oLng){

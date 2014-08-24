@@ -17,6 +17,7 @@ module.exports = function(app, express){
   app.get('/', home.index);
   app.get('/trips/new', trips.new);
   app.post('/trips', trips.create);
+  app.get('/trips', trips.index);
 
   console.log('Express: Routes Loaded');
 };

@@ -1,0 +1,31 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name": "LA",
+  "cash":"1050",
+  "origin": "Nashville, TN, USA",
+  "oLat": "36.16",
+  "oLng": "-86.78",
+  "destination": "Los Angeles, CA, USA",
+  "dLat": "34.05",
+  "dLng": "-118.24",
+  "mpg": "35",
+  "priceGas": "3.55",
+  "startDate": "2014-08-29",
+  "endDate": "2014-09-08"
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name": "Seattle",
+  "cash":"1250",
+  "origin": "Nashville, TN, USA",
+  "oLat": "36.16",
+  "oLng": "-86.78",
+  "destination": "Seattle, WA, USA",
+  "dLat": "47.61",
+  "dLng": "-122.33",
+  "mpg": "35",
+  "priceGas": "3.55",
+  "startDate": "2014-08-29",
+  "endDate": "2014-09-08"
+}
