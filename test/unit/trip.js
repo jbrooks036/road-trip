@@ -45,5 +45,14 @@ describe('Trip', function(){
     });
   });
 
+  describe('.findById', function(){
+    it('should return the trip with the given id', function(done){
+      Trip.findById('000000000000000000000002', function(err, t){
+        expect(t.name).to.equal('Seattle');
+        done();
+      });
+    });
+  });
+
 });
 

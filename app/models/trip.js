@@ -1,7 +1,7 @@
 'use strict';
 
-var Mongo = require('mongodb');
-//    _     = require('lodash');
+var Mongo = require('mongodb'),
+    _     = require('lodash');
 
 function Trip(fields){
   this._id        = Mongo.ObjectID();
@@ -33,6 +33,13 @@ Trip.create = function(fields, files, cb){
   Trip.collection.save(t, cb);
 };
 
+Trip.findById = function(id, cb){
+  console.log('T.fBId id: ', id);
+  var _id = Mongo.ObjectID(id);
+  Trip.collection.findOne({_id:_id}, function(err, obj){
+    cb(err, _.create(Trip.prototype, obj));
+  });
+};
 
 module.exports = Trip;
 

@@ -21,10 +21,16 @@ block content
         tbody
           each trip in trips
             tr
-              td= trip.name
+              td: a(href='/trips/#{trip._id}')= trip.name
               td= trip.cash
               td= trip.origin
               td= trip.destination
+              td ###
+              td ###
+              td= trip.mpg
+              td= trip.priceGas
+              th ###
+              th $$$
   .row
     .col-xs-12
       #directions

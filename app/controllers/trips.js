@@ -25,3 +25,10 @@ exports.create = function(req, res){
     });
   });
 };
+
+exports.show = function(req, res){
+  Trip.findById(req.params.id, function(err, trip){
+    console.log('controller-show trip = ', trip);
+    res.render('trips/show', {trip:trip});
+  });
+};
