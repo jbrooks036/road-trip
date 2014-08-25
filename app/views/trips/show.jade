@@ -1,6 +1,9 @@
 extends ../shared/template
 block content
-  h1=trip.name
+  .row
+    .col-xs-12
+      h1=trip.name
+      #bigmap
 
 block scripts
   script(src='/js/user/show.js')

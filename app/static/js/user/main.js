@@ -1,5 +1,6 @@
 /* jshint unused:false, camelcase:false */
-/* global google */
+/* global _, createMap, addMarker, google */
+
 
 function geocode(address, cb){
   'use strict';
